@@ -123,14 +123,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "071ee5ebf2138e3ad180e0aacf6940c2cab5e6d8333741d9925c7bee2b153f39"
 dependencies = [
  "askama_parser",
- "basic-toml",
- "glob",
  "memchr",
  "proc-macro2",
  "quote",
  "rustc-hash",
- "serde",
- "serde_derive",
  "syn 3.0.4",
 ]
 
@@ -150,8 +146,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2c5ae75772275d268b03ab8bdccdd12117b6169ee23256942b34e46c9f476583"
 dependencies = [
  "rustc-hash",
- "serde",
- "serde_derive",
  "unicode-ident",
  "winnow",
 ]
@@ -213,15 +207,6 @@ name = "base64"
 version = "0.23.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ac07cdecf99051d9a5238b80f35af32cdeba5b336e55d957b318b50137e18da5"
-
-[[package]]
-name = "basic-toml"
-version = "0.1.10"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ba62675e8242a4c4e806d12f11d136e626e6c8361d6b829310732241652a178a"
-dependencies = [
- "serde",
-]
 
 [[package]]
 name = "bitflags"
@@ -904,12 +889,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e629b9b98ef3dd8afe6ca2bd0f89306cec16d43d907889945bc5d6687f2f13c7"
 
 [[package]]
-name = "glob"
-version = "0.3.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e4eba85ea1d0a966a983acd07deee566e67395d2d96b6fb39e62b5a833f1eb0b"
-
-[[package]]
 name = "globset"
 version = "0.4.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1488,21 +1467,21 @@ checksum = "d211803b9b6b570f68772237e415a029d5a50c65d382910b879fb19d3271f94d"
 
 [[package]]
 name = "ox_content_allocator"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "bumpalo",
 ]
 
 [[package]]
 name = "ox_content_ast"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "ox_content_allocator",
 ]
 
 [[package]]
 name = "ox_content_cli"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "clap",
  "crossterm",
@@ -1526,7 +1505,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_component_resolver"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "corsa_client",
  "insta",
@@ -1538,7 +1517,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_docs"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "criterion",
  "insta",
@@ -1565,7 +1544,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_highlight"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "tree-sitter",
  "tree-sitter-bash",
@@ -1615,7 +1594,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_i18n"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "insta",
  "miette",
@@ -1628,7 +1607,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_i18n_checker"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "insta",
  "miette",
@@ -1645,7 +1624,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_i18n_cli"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "clap",
  "miette",
@@ -1656,7 +1635,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_i18n_lsp"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "ox_content_i18n",
  "ox_content_i18n_checker",
@@ -1670,7 +1649,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_incremental"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "compact_str 0.10.0",
  "criterion",
@@ -1683,7 +1662,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_link_checker"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "clap",
  "insta",
@@ -1697,7 +1676,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_lsp"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "compact_str 0.10.0",
  "insta",
@@ -1723,7 +1702,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_markdown_lint"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "aho-corasick",
  "compact_str 0.10.0",
@@ -1741,7 +1720,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_mdast"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "ox_content_allocator",
  "ox_content_ast",
@@ -1751,7 +1730,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_mdc_checker"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "clap",
  "insta",
@@ -1762,11 +1741,11 @@ dependencies = [
 
 [[package]]
 name = "ox_content_mermaid"
-version = "3.3.3"
+version = "3.4.0"
 
 [[package]]
 name = "ox_content_napi"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "criterion",
  "insta",
@@ -1801,7 +1780,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_og_image"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "insta",
  "serde",
@@ -1811,7 +1790,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_parser"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "compact_str 0.10.0",
  "criterion",
@@ -1828,7 +1807,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_profile_cli"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "clap",
  "ox_content_allocator",
@@ -1841,7 +1820,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_profiler"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "insta",
  "serde",
@@ -1850,7 +1829,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_renderer"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "compact_str 0.10.0",
  "criterion",
@@ -1868,7 +1847,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_search"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "compact_str 0.10.0",
  "insta",
@@ -1883,7 +1862,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_ssg"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "askama",
  "insta",
@@ -1896,7 +1875,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_theme_generator"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "regex",
  "serde",
@@ -1905,7 +1884,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_transform"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "compact_str 0.10.0",
  "insta",
@@ -1924,7 +1903,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_vite"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "insta",
  "ox_content_allocator",
@@ -1938,7 +1917,7 @@ dependencies = [
 
 [[package]]
 name = "ox_content_wasm"
-version = "3.3.3"
+version = "3.4.0"
 dependencies = [
  "js-sys",
  "ox_content_allocator",
